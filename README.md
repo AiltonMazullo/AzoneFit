@@ -2,7 +2,7 @@
 
 ## 🚀 Deploy
 
-[**Ver Projeto Online**](azone-fit-knyf-osb51sqnr-ailtons-projects-e953598b.vercel.app)
+[**Ver Projeto Online**]([https://azone-fit-knyf.vercel.app])
 
 ## 📋 Sobre o Projeto
 
