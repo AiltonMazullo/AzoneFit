@@ -22,5 +22,3 @@ Formulário interativo multi-etapas desenvolvido para a AzoneFit, com 9 pergunta
 **LinkedIn:** [www.linkedin.com/in/ailton-mazullo-33b5b0276]
 
 ---
-
-*Projeto desenvolvido com React + Vite*

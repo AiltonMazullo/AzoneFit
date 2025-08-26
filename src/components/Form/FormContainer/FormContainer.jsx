@@ -27,7 +27,8 @@ const FormContainer = () => {
       setTransitionDirection("next");
       setIsTransitioning(true);
       setTimeout(() => {
-        if (currentQuestionIndex === 8) { // Última pergunta (índice 8)
+        if (currentQuestionIndex === 8) {
+          // Última pergunta (índice 8)
           setShowThankYou(true);
         } else {
           nextQuestion();
@@ -104,20 +105,20 @@ const FormContainer = () => {
     const currentAnswer = answers[currentQuestionIndex] || "";
 
     switch (question?.type) {
-      case 'text':
-       case 'email':
-         return (
-           <input
-             type={question.type === 'email' ? 'email' : 'text'}
-             className={styles.input}
-             placeholder={question.placeholder || "Type your answer here..."}
-             value={currentAnswer}
-             onChange={handleAnswerChange}
-             onKeyPress={handleKeyPress}
-           />
-         );
+      case "text":
+      case "email":
+        return (
+          <input
+            type={question.type === "email" ? "email" : "text"}
+            className={styles.input}
+            placeholder={question.placeholder || "Type your answer here..."}
+            value={currentAnswer}
+            onChange={handleAnswerChange}
+            onKeyPress={handleKeyPress}
+          />
+        );
 
-      case 'textarea':
+      case "textarea":
         return (
           <div>
             <textarea
@@ -128,9 +129,7 @@ const FormContainer = () => {
               rows={4}
             />
             {question.instruction && (
-              <div className={styles.instruction}>
-                {question.instruction}
-              </div>
+              <div className={styles.instruction}>{question.instruction}</div>
             )}
           </div>
         );
@@ -140,9 +139,7 @@ const FormContainer = () => {
           <div className={styles.radioGroup}>
             {question.options?.map((option) => (
               <label key={option.id} className={styles.radioOption}>
-                <div className={styles.radioCircle}>
-                  {option.id}
-                </div>
+                <div className={styles.radioCircle}>{option.id}</div>
                 <input
                   type="radio"
                   name={`question-${currentQuestionIndex}`}
@@ -167,9 +164,7 @@ const FormContainer = () => {
             )}
             {question.options?.map((option) => (
               <label key={option.id} className={styles.checkboxOption}>
-                <div className={styles.checkboxCircle}>
-                  {option.id}
-                </div>
+                <div className={styles.checkboxCircle}>{option.id}</div>
                 <input
                   type="checkbox"
                   value={option.label}
@@ -254,9 +249,7 @@ const FormContainer = () => {
             </div>
 
             {currentQuestion?.example && (
-              <div className={styles.example}>
-                {currentQuestion.example}
-              </div>
+              <div className={styles.example}>{currentQuestion.example}</div>
             )}
 
             <div className={styles.inputSection}>
