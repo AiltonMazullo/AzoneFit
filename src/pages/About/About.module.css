@@ -1,0 +1,233 @@
+/* Mobile First - Base Styles */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.main {
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffff;
+  margin: 0 0 3rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.introSection {
+  margin: 3rem 0;
+}
+
+.introText {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.missionSection {
+  margin: 3rem 0;
+}
+
+.missionText {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.founderSection {
+  margin: 3rem 0;
+}
+
+.founderText {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.servicesSection {
+  margin: 3rem 0;
+}
+
+.servicesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.serviceBullet {
+  color: #00ffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.1rem;
+}
+
+.serviceText {
+  color: #cccccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.serviceText strong {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+.philosophySection {
+  margin: 3rem 0;
+}
+
+.philosophyText {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.missionStatement {
+  margin: 4rem 0;
+}
+
+.missionStatementText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.ctaSection {
+  margin: 4rem 0 2rem 0;
+}
+
+.ctaTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .introText {
+    font-size: 1.4rem;
+  }
+  
+  .missionText,
+  .founderText,
+  .philosophyText {
+    font-size: 1.1rem;
+  }
+  
+  .serviceText {
+    font-size: 1.1rem;
+  }
+  
+  .missionStatementText {
+    font-size: 1.3rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+  
+  .main {
+    padding: 3rem 2rem;
+  }
+  
+  .content {
+    max-width: 900px;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    margin: 0 0 4rem 0;
+  }
+  
+  .introText {
+    font-size: 1.5rem;
+  }
+  
+  .missionText,
+  .founderText,
+  .philosophyText {
+    font-size: 1.2rem;
+  }
+  
+  .serviceText {
+    font-size: 1.2rem;
+  }
+  
+  .missionStatementText {
+    font-size: 1.4rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .title {
+    font-size: 4rem;
+  }
+  
+  .ctaTitle {
+    font-size: 3rem;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useFormState } from "../../../hooks/useFormState";
-import ProgressBar from "../ProgressBar/ProgressBar";
+import { useFormState } from "../../hooks/useFormState";
+import ProgressBar from "../../components/Form/ProgressBar/ProgressBar";
 import styles from "./FormContainer.module.css";
 
 const FormContainer = () => {
