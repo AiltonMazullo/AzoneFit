@@ -2,7 +2,7 @@
 
 ## 🚀 Deploy
 
-[**Ver Projeto Online**](https://azone-fit.vercel.app)
+[**Ver Projeto Online**](https://azone-fit-knyf.vercel.app)
 
 ## 📋 Sobre o Projeto
 
