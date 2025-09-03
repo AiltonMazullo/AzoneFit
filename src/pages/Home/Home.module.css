@@ -99,11 +99,17 @@
 }
 
 .serviceIcon {
-  width: 60px;
-  height: 60px;
+  width: 64px !important;
+  height: 64px !important;
   margin-bottom: 1rem;
   filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%) hue-rotate(175deg) brightness(103%) contrast(101%);
   transition: all 0.3s ease;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+  max-width: 64px;
+  max-height: 64px;
 }
 
 .BoxListItem:hover .serviceIcon {
@@ -251,8 +257,10 @@
   }
   
   .serviceIcon {
-    width: 70px;
-    height: 70px;
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
   }
   
   .headerTextBlue {

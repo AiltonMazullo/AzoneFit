@@ -43,19 +43,19 @@ const About = () => {
               <li className={styles.serviceItem}>
                 <span className={styles.serviceBullet}>•</span>
                 <span className={styles.serviceText}>
-                  <strong>Personal Training</strong> – 1-on-1 tailored sessions.
+                  <strong>PERSONAL TRAINING</strong> – 1-on-1 tailored sessions.
                 </span>
               </li>
               <li className={styles.serviceItem}>
                 <span className={styles.serviceBullet}>•</span>
                 <span className={styles.serviceText}>
-                  <strong>Group Classes</strong> – energy, connection, and motivation.
+                  <strong>ALLIANCE</strong> – Train together, grow together, connect with people who share your journey.
                 </span>
               </li>
               <li className={styles.serviceItem}>
                 <span className={styles.serviceBullet}>•</span>
                 <span className={styles.serviceText}>
-                  <strong>Online Coaching</strong> – flexibility to train anywhere.
+                  <strong>CHALLENGE 15 DAYS</strong> – Push your limits and unlock a stronger version of yourself in just two weeks.
                 </span>
               </li>
             </ul>

@@ -3,21 +3,36 @@ nav {
   justify-content: center;
 }
 
-nav a {
-  margin: 0 1rem;
-  padding: 0.5rem;
+a {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
   text-decoration: none;
-  color: #000000;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  margin: 0 1rem;
 }
 
-nav a:hover {
+a:hover {
   color: #ccc;
 }
 
-.active {
+a.active {
   background: linear-gradient(45deg, #00ffff, #0080ff);
-  border: none;
+  border: 2px solid rgba(0, 255, 255, 0.6);
   border-radius: 50px;
   padding: 1rem 3rem;
   font-size: 1.1rem;
@@ -27,7 +42,7 @@ nav a:hover {
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   transform: scale(1);

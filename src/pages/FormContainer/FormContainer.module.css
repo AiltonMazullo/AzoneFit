@@ -1,8 +1,8 @@
 .formContainer {
   min-height: 100vh;
-  background-color: #1a1a1a;
-  color: var(text-primary);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -13,22 +13,22 @@
   top: 24px;
   left: 24px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 8px;
   z-index: 10;
 }
 
 .logoIcon {
-  color: var(--accent-yellow);
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%) hue-rotate(175deg) brightness(103%) contrast(101%);
 }
 
 .logoText {
-  color: var(--accent-yellow);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  width: 80px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%) hue-rotate(175deg) brightness(103%) contrast(101%);
 }
 
 .mainContent {
@@ -101,19 +101,19 @@
 }
 
 .questionNumber {
-  color: var(--text-primary);
+  color: #ffffff;
   font-size: 20px;
   font-weight: 400;
 }
 
 .arrow {
-  color: var(--text-primary);
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
 }
 
 .question {
-  color: var(--accent-yellow);
+  color: #00ffff;
   flex: 1;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .input:focus {
-  border-bottom-color: var(--accent-yellow);
+  border-bottom-color: #00ffff;
 }
 
 /* Button Row */
@@ -152,8 +152,8 @@
 
 /* OK Button */
 .okButton {
-  background-color: var(--accent-yellow);
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  color: #000000;
   border: none;
   padding: 12px 24px;
   border-radius: 6px;
@@ -165,8 +165,9 @@
 }
 
 .okButton:hover:not(:disabled) {
-  background-color: var(--accent-yellow);
+  background: linear-gradient(45deg, #00ffff, #0080ff);
   transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
 }
 
 .okButton:disabled {
@@ -176,7 +177,7 @@
 }
 
 .buttonHint {
-  color: var(--accent-yellow);
+  color: #00ffff;
   font-size: 14px;
   font-weight: 400;
 }
@@ -192,8 +193,8 @@
 }
 
 .typeformButton {
-  background-color: var(--accent-yellow);
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  color: #000000;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -204,8 +205,9 @@
 }
 
 .typeformButton:hover {
-  background-color: var(--accent-yellow);
+  background: linear-gradient(45deg, #00ffff, #0080ff);
   transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
 }
 
 .navigationButtons {
@@ -214,20 +216,20 @@
 }
 
 .navButton {
-  background-color: var(--accent-yellow);
-  color: #1a1a1a;
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  color: #000000;
   border: none;
   padding: 6px 10px;
   font-size: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 1px solid var(--accent-yellow);
+  border: 1px solid #00ffff;
   font-weight: bold;
 }
 
 .navButton:first-child {
   border-radius: 4px 0 0 4px;
-  border-right: 1px solid var(--accent-yellow);
+  border-right: 1px solid #00ffff;
 }
 
 .navButton:last-child {
@@ -235,7 +237,8 @@
 }
 
 .navButton:hover:not(:disabled) {
-  background-color: var(--accent-yellow);
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
 }
 
 .navButton:disabled {
@@ -378,7 +381,7 @@
 }
 
 .textarea:focus {
-  border-bottom-color: var(--accent-yellow);
+  border-bottom-color: #00ffff;
 }
 
 .instruction {
@@ -389,7 +392,7 @@
 }
 
 .example {
-  color: var(--accent-yellow);
+  color: #00ffff;
   margin-bottom: 1.6rem;
   font-style: italic;
 }
@@ -403,14 +406,13 @@
 }
 
 .thankYouText {
-  color: var(--accent-yellow);
+  color: #00ffff;
   font-size: 48px;
   font-weight: 700;
   text-align: center;
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .logo {
     top: 16px;
@@ -451,5 +453,31 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+}
+
+@media (max-width: 498px) {
+  .logo {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    z-index: 10;
+    width: auto;
+  }
+  
+  .logoIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .logoText {
+    width: 60px;
+    height: auto;
   }
 }

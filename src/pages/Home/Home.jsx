@@ -2,16 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 import NavBar from "../../components/UI/NavBar/NavBar";
-import personalImg from "../../assets/personal.png";
-import groupImg from "../../assets/group.png";
-import appleImg from "../../assets/apple.png";
-import { Router } from "react-router-dom";
+import personalImg from "../../assets/personal.svg";
+import groupImg from "../../assets/group.svg";
+import Challenge15Days from "../../assets/15days.svg"
 
 export default function Home() {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate('/form');
+    navigate("/form");
   };
 
   return (
@@ -27,38 +26,52 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <h2>
-          <span>ELEVATE YOUR FITNESS</span>
+          <span>DISCIPLINE BEYOND LIMITS</span>
         </h2>
-        <p>Transform your body and reach your potential</p>
+        <p>Transform your body, sharpen your mind, and live with purpose.</p>
 
         <div className={styles.Box}>
           <ul className={styles.BoxList}>
             <li className={styles.BoxListItem}>
-              <img src={personalImg} alt="Personal Training" className={styles.serviceIcon} />
+              <img
+                src={personalImg}
+                alt="Personal Training"
+                className={styles.serviceIcon}
+              />
               <h4 className={styles.headerTextBlue}>PERSONAL TRAINING</h4>
-              <p>1-on-1 tailored sessions</p>
+              <p>1-on-1 tailored sessions.</p>
             </li>
 
             <li className={styles.BoxListItem}>
-              <img src={groupImg} alt="Group Classes" className={styles.serviceIcon} />
-              <h4 className={styles.headerTextBlue}>GROUP CLASSES</h4>
-              <p>Energy, connection, and motivation</p>
+              <img
+                src={groupImg}
+                alt="Aliança"
+                className={styles.serviceIcon}
+              />
+              <h4 className={styles.headerTextBlue}>ALLIANCE</h4>
+              <p>Train together, grow together, connect with people who share your journey.</p>
             </li>
 
             <li className={styles.BoxListItem}>
-              <img src={appleImg} alt="Nutrition Coaching" className={styles.serviceIcon} />
-              <h4 className={styles.headerTextBlue}>NUTRITION COACHING</h4>
-              <p>Build nutrition habits</p>
+              <img
+                src={Challenge15Days}
+                alt="Desafio 15 dias"
+                className={styles.serviceIcon}
+              />
+              <h4 className={styles.headerTextBlue}>CHALLENGE 15 DAYS</h4>
+              <p>Push your limits and unlock a stronger version of yourself in just two weeks.</p>
             </li>
           </ul>
         </div>
-        
+
         <div className={styles.testimonial}>
-          <p>"This program has completely changed my life."</p>
+          <p>"This is not a workout. This is your mission."</p>
         </div>
-        
+
         <div className={styles.ctaSection}>
-          <button className={styles.getStartedBtn} onClick={handleGetStarted}>GET STARTED</button>
+          <button className={styles.getStartedBtn} onClick={handleGetStarted}>
+            GET STARTED
+          </button>
         </div>
       </main>
     </div>

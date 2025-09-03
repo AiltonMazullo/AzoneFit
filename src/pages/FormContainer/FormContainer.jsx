@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useFormState } from "../../hooks/useFormState";
 import ProgressBar from "../../components/Form/ProgressBar/ProgressBar";
 import styles from "./FormContainer.module.css";
+import LogoFormIcon from "../../public/logo-form-icon.svg";
+import LogoFormNome from "../../public/logo-form-nome.svg";
 
 const FormContainer = () => {
   const {
@@ -22,13 +25,32 @@ const FormContainer = () => {
     updateAnswer(e.target.value);
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (isAnswerValid()) {
       setTransitionDirection("next");
       setIsTransitioning(true);
+
+      if (currentQuestionIndex === 8) {
+        try {
+          const firstName = answers[0];
+          const email = answers[2];
+
+          const response = await axios.post("/send-email", {
+            firstName,
+            email,
+          });
+
+          console.log("Email enviado com sucesso!", response.data);
+        } catch (error) {
+          console.error(
+            "Erro ao enviar email:",
+            error.response?.data || error.message
+          );
+        }
+      }
+
       setTimeout(() => {
         if (currentQuestionIndex === 8) {
-          // Última pergunta (índice 8)
           setShowThankYou(true);
         } else {
           nextQuestion();
@@ -201,7 +223,8 @@ const FormContainer = () => {
       <ProgressBar currentQuestion={currentQuestionIndex} totalQuestions={9} />
 
       <div className={styles.logo}>
-        <span className={styles.logoText}>AZONE</span>
+        <img src={LogoFormIcon} alt="Ícone DM" className={styles.logoIcon} />
+        <img src={LogoFormNome} alt="DM Workout" className={styles.logoText} />
       </div>
 
       {/* Main */}
