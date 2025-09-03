@@ -43,7 +43,7 @@ const About = () => {
               <li className={styles.serviceItem}>
                 <span className={styles.serviceBullet}>•</span>
                 <span className={styles.serviceText}>
-                  <strong>PERSONAL TRAINING</strong> – 1-on-1 tailored sessions.
+                  <strong>ONLINE COACHING</strong> – Personalized guidance for training, nutrition, and lifestyle anytime, anywhere.
                 </span>
               </li>
               <li className={styles.serviceItem}>

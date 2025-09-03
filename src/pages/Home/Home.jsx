@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 import NavBar from "../../components/UI/NavBar/NavBar";
-import personalImg from "../../assets/personal.svg";
+import onlineCoachingImg from "../../assets/onlineCoaching.svg";
 import groupImg from "../../assets/group.svg";
 import Challenge15Days from "../../assets/15days.svg"
 
@@ -32,17 +32,17 @@ export default function Home() {
 
         <div className={styles.Box}>
           <ul className={styles.BoxList}>
-            <li className={styles.BoxListItem}>
+            <li className={styles.BoxListItem} onClick={handleGetStarted}>
               <img
-                src={personalImg}
-                alt="Personal Training"
+                src={onlineCoachingImg}
+                alt="Coaching"
                 className={styles.serviceIcon}
               />
-              <h4 className={styles.headerTextBlue}>PERSONAL TRAINING</h4>
-              <p>1-on-1 tailored sessions.</p>
+              <h4 className={styles.headerTextBlue}>ONLINE COACHING</h4>
+              <p>Personalized guidance for training, nutrition, and lifestyle anytime, anywhere.</p>
             </li>
 
-            <li className={styles.BoxListItem}>
+            <li className={styles.BoxListItem} onClick={handleGetStarted}>
               <img
                 src={groupImg}
                 alt="Aliança"
@@ -52,7 +52,7 @@ export default function Home() {
               <p>Train together, grow together, connect with people who share your journey.</p>
             </li>
 
-            <li className={styles.BoxListItem}>
+            <li className={styles.BoxListItem} onClick={handleGetStarted}>
               <img
                 src={Challenge15Days}
                 alt="Desafio 15 dias"
