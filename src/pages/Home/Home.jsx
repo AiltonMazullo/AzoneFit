@@ -4,7 +4,8 @@ import styles from "./Home.module.css";
 import NavBar from "../../components/UI/NavBar/NavBar";
 import onlineCoachingImg from "../../assets/onlineCoaching.svg";
 import groupImg from "../../assets/group.svg";
-import Challenge15Days from "../../assets/15days.svg"
+import Challenge15Days from "../../assets/15days.svg";
+import DM from "../../assets/DM.svg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -19,10 +20,7 @@ export default function Home() {
         <NavBar />
       </header>
       <div className={styles.logo}>
-        <h1>DM</h1>
-        <h3>
-          <span>DM WORKOUT</span>
-        </h3>
+        <img src={DM} alt="Logo DM Home" />
       </div>
       <main className={styles.main}>
         <h2>
@@ -39,7 +37,10 @@ export default function Home() {
                 className={styles.serviceIcon}
               />
               <h4 className={styles.headerTextBlue}>ONLINE COACHING</h4>
-              <p>Personalized guidance for training, nutrition, and lifestyle anytime, anywhere.</p>
+              <p>
+                Personalized guidance for training, nutrition, and lifestyle
+                anytime, anywhere.
+              </p>
             </li>
 
             <li className={styles.BoxListItem} onClick={handleGetStarted}>
@@ -49,7 +50,10 @@ export default function Home() {
                 className={styles.serviceIcon}
               />
               <h4 className={styles.headerTextBlue}>ALLIANCE</h4>
-              <p>Train together, grow together, connect with people who share your journey.</p>
+              <p>
+                Train together, grow together, connect with people who share
+                your journey.
+              </p>
             </li>
 
             <li className={styles.BoxListItem} onClick={handleGetStarted}>
@@ -59,7 +63,10 @@ export default function Home() {
                 className={styles.serviceIcon}
               />
               <h4 className={styles.headerTextBlue}>CHALLENGE 15 DAYS</h4>
-              <p>Push your limits and unlock a stronger version of yourself in just two weeks.</p>
+              <p>
+                Push your limits and unlock a stronger version of yourself in
+                just two weeks.
+              </p>
             </li>
           </ul>
         </div>

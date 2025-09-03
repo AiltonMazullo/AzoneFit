@@ -3,8 +3,8 @@ import axios from "axios";
 import { useFormState } from "../../hooks/useFormState";
 import ProgressBar from "../../components/Form/ProgressBar/ProgressBar";
 import styles from "./FormContainer.module.css";
-import LogoFormIcon from "../../public/logo-form-icon.svg";
-import LogoFormNome from "../../public/logo-form-nome.svg";
+import LogoFormIcon from "../../assets/logo-form-icon.svg";
+import LogoFormNome from "../../assets/logo-form-nome.svg";
 
 const FormContainer = () => {
   const {

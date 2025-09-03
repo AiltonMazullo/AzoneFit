@@ -18,35 +18,23 @@
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 2rem 0;
   position: relative;
   z-index: 10;
 }
 
-.logo h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  margin: 0;
-  background: linear-gradient(45deg, #00ffff, #0080ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-  letter-spacing: 0.2em;
-}
-
-.logo h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0.5rem 0 0 0;
-  color: #ffffff;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+.logo img {
+  width: 20vw;
+  height: auto;
+  margin-top: -150px;
 }
 
 .main {
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -56,6 +44,7 @@
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
+  margin-top: -130px;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -232,24 +221,55 @@
   transform: translateY(0);
 }
 
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .logo {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 180px;
+    height: auto;
+  }
+  
+  .main {
+    padding: 0.5rem 1rem;
+  }
+  
+  .main h2 {
+    font-size: 1.8rem;
+  }
+  
+  .main p {
+    font-size: 0.9rem;
+  }
+}
+
 /* Tablet Styles */
 @media (min-width: 768px) {
   .container {
     padding: 0 2rem;
   }
-
-  .logo h1 {
-    font-size: 5rem;
+  
+  .logo {
+    margin: 1rem 0;
   }
-
-  .logo h3 {
-    font-size: 1.2rem;
+  
+  .logo img {
+    width: 250px;
+    height: auto;
   }
-
+  
+  .main {
+    padding: 1rem 2rem;
+  }
+  
   .main h2 {
     font-size: 2.5rem;
   }
-
+  
   .main p {
     font-size: 1.1rem;
     max-width: 600px;
@@ -300,19 +320,16 @@
   }
 
   .logo {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
   }
 
-  .logo h1 {
-    font-size: 6rem;
-  }
-
-  .logo h3 {
-    font-size: 1.4rem;
+  .logo img {
+    width: 300px;
+    height: auto;
   }
 
   .main {
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
   }
 
   .main h2 {
