@@ -16,13 +16,11 @@ a {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
   text-align: center;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
   margin: 0 1rem;
 }
 
@@ -42,7 +40,8 @@ a.active {
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.4),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
   transform: scale(1);
