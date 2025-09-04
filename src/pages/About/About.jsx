@@ -1,90 +1,104 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/UI/NavBar/NavBar";
+import onlineCoachingImg from "../../assets/onlineCoaching.svg";
+import groupImg from "../../assets/group.svg";
+import Box from "../../components/UI/Box/Box";
 import styles from "./About.module.css";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/form");
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <NavBar />
       </header>
-      
       <main className={styles.main}>
-        <div className={styles.content}>
-          <h1 className={styles.title}>ABOUT US</h1>
-          
-          <div className={styles.introSection}>
-            <p className={styles.introText}>
-              At DM Workout, we believe fitness is more than exercise—
-              <br />it's transformation.
+        <section className={styles.section}>
+          <div className={styles.textImageSection}>
+            <div className={styles.textContent}>
+              <p className={styles.mainText}>
+                At DM Aeon, fitness is more than movement it's the discipline that shapes who you become.
+              </p>
+              <p className={styles.subText}>
+                We exist to help people break limits, build lasting strength,
+                and discover the version of themselves they didn't know was
+                possible.
+              </p>
+            </div>
+            <div className={styles.imageContent}>
+              <img
+                src={onlineCoachingImg}
+                alt="Fitness Training"
+                className={styles.sectionImage}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.imageTextSection}>
+            <div className={styles.imageContent}>
+              <img
+                src={groupImg}
+                alt="Diego Lins"
+                className={styles.sectionImage}
+              />
+            </div>
+            <div className={styles.textContent}>
+              <p className={styles.mainText}>
+                Founded by Diego Lins — certified trainer and former Army
+                officer.
+              </p>
+              <p className={styles.subText}>
+                From years in the military, Diego learned that true progress
+                comes from discipline, resilience, and consistency.
+                DM Workout was born to bring that same edge into fitness and
+                life.
+              </p>
+              <p className={styles.subText}>
+                This is not a quick fix.
+                It's precision, science, and mindset combined to forge results
+                that last.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <Box />
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.textSection}>
+            <p className={styles.highlightText}>
+              What makes DM Workout different?
+              We don't just train bodies we rewire mindsets.
+            </p>
+            <p className={styles.subText}>
+              Better health, unshakable confidence
+              and discipline that expands into every part of life
+              That's the ripple effect of transformation.
             </p>
           </div>
-          
-          <div className={styles.missionSection}>
-            <p className={styles.missionText}>
-              Our mission is to empower people of all backgrounds, 
-              men and women, to discover their best version 
-              through training, discipline, and balance.
-            </p>
-          </div>
-          
-          <div className={styles.founderSection}>
-            <p className={styles.founderText}>
-              Founded by Diego Lins, a certified personal trainer 
-              and former Army officer, DM Workout combines 
-              military discipline with modern fitness science to 
-              deliver workouts that are challenging, effective, 
-              and sustainable.
-            </p>
-          </div>
-          
-          <div className={styles.servicesSection}>
-            <ul className={styles.servicesList}>
-              <li className={styles.serviceItem}>
-                <span className={styles.serviceBullet}>•</span>
-                <span className={styles.serviceText}>
-                  <strong>ONLINE COACHING</strong> – Personalized guidance for training, nutrition, and lifestyle anytime, anywhere.
-                </span>
-              </li>
-              <li className={styles.serviceItem}>
-                <span className={styles.serviceBullet}>•</span>
-                <span className={styles.serviceText}>
-                  <strong>ALLIANCE</strong> – Train together, grow together, connect with people who share your journey.
-                </span>
-              </li>
-              <li className={styles.serviceItem}>
-                <span className={styles.serviceBullet}>•</span>
-                <span className={styles.serviceText}>
-                  <strong>CHALLENGE 15 DAYS</strong> – Push your limits and unlock a stronger version of yourself in just two weeks.
-                </span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className={styles.philosophySection}>
-            <p className={styles.philosophyText}>
-              What sets us apart is not just the workout itself, but the 
-              lifestyle change it inspires. From improved health to stronger 
-              relationships and greater confidence, our programs create 
-              a ripple effect that goes far beyond the gym.
-            </p>
-          </div>
-          
-          <div className={styles.missionStatement}>
-            <p className={styles.missionStatementText}>
-              At DM Workout, we don't just train bodies—
-              <br />we shape mindsets, habits, and lives.
-            </p>
-          </div>
-          
-          <div className={styles.ctaSection}>
+        </section>
+
+        <section className={styles.ctaSection}>
+          <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>
-              JOIN US AND BECOME
-              <br />THE BEST VERSION
-              <br />OF YOURSELF.
+              Your next chapter starts here
+              Strong body. Strong mind. Strong life.
             </h2>
+            <button className={styles.getStartedBtn} onClick={handleGetStarted}>
+              GET STARTED
+            </button>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );

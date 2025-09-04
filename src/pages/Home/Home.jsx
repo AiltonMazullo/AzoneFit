@@ -2,10 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 import NavBar from "../../components/UI/NavBar/NavBar";
-import onlineCoachingImg from "../../assets/onlineCoaching.svg";
-import groupImg from "../../assets/group.svg";
-import Challenge15Days from "../../assets/15days.svg";
 import DM from "../../assets/DM.svg";
+import Box from "../../components/UI/Box/Box";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -28,53 +26,10 @@ export default function Home() {
         </h2>
         <p>Transform your body, sharpen your mind, and live with purpose.</p>
 
-        <div className={styles.Box}>
-          <ul className={styles.BoxList}>
-            <li className={styles.BoxListItem} onClick={handleGetStarted}>
-              <img
-                src={onlineCoachingImg}
-                alt="Coaching"
-                className={styles.serviceIcon}
-              />
-              <h4 className={styles.headerTextBlue}>ONLINE COACHING</h4>
-              <p>
-                Personalized guidance for training, nutrition, and lifestyle
-                anytime, anywhere.
-              </p>
-            </li>
-
-            <li className={styles.BoxListItem} onClick={handleGetStarted}>
-              <img
-                src={groupImg}
-                alt="Aliança"
-                className={styles.serviceIcon}
-              />
-              <h4 className={styles.headerTextBlue}>ALLIANCE</h4>
-              <p>
-                Train together, grow together, connect with people who share
-                your journey.
-              </p>
-            </li>
-
-            <li className={styles.BoxListItem} onClick={handleGetStarted}>
-              <img
-                src={Challenge15Days}
-                alt="Desafio 15 dias"
-                className={styles.serviceIcon}
-              />
-              <h4 className={styles.headerTextBlue}>CHALLENGE 15 DAYS</h4>
-              <p>
-                Push your limits and unlock a stronger version of yourself in
-                just two weeks.
-              </p>
-            </li>
-          </ul>
-        </div>
-
         <div className={styles.testimonial}>
           <p>"This is not a workout. This is your mission."</p>
         </div>
-
+        <Box />
         <div className={styles.ctaSection}>
           <button className={styles.getStartedBtn} onClick={handleGetStarted}>
             GET STARTED

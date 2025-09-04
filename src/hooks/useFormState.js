@@ -28,7 +28,7 @@ export const useFormState = () => {
   };
 
   const submitForm = async () => {
-    setLoading(true);
+    setLoading(true); 
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log("Formulário enviado:", answers);

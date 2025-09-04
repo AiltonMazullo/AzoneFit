@@ -2,9 +2,11 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .header {
@@ -14,121 +16,152 @@
 }
 
 .main {
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   position: relative;
   z-index: 10;
 }
 
-.content {
-  max-width: 800px;
-  margin: 0 auto;
+.section {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.textImageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.imageTextSection {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  align-items: center;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #00ffff;
-  margin: 0 0 3rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.introSection {
-  margin: 3rem 0;
-}
-
-.introText {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.missionSection {
-  margin: 3rem 0;
-}
-
-.missionText {
-  font-size: 1rem;
-  color: #cccccc;
-  margin: 0;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.founderSection {
-  margin: 3rem 0;
-}
-
-.founderText {
-  font-size: 1rem;
-  color: #cccccc;
-  margin: 0;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.servicesSection {
-  margin: 3rem 0;
-}
-
-.servicesList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.serviceItem {
+.imageContent {
+  flex: 1;
   display: flex;
-  align-items: flex-start;
-  margin: 1rem 0;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.serviceBullet {
-  color: #00ffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 0.1rem;
+.sectionImage {
+  width: 200px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%)
+    hue-rotate(175deg) brightness(103%) contrast(101%);
+  transform: translateY(-20%);
 }
 
-.serviceText {
-  color: #cccccc;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.serviceText strong {
-  color: #00ffff;
+.mainText {
+  font-size: 1.3rem;
   font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
 }
 
-.philosophySection {
+.subText {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+}
+
+.highlightText {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #00ffff;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.boxSection {
   margin: 3rem 0;
 }
 
-.philosophyText {
-  font-size: 1rem;
-  color: #cccccc;
-  margin: 0;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.missionStatement {
+.textSection {
+  text-align: center;
   margin: 4rem 0;
 }
 
-.missionStatementText {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #ffffff;
+.ctaSection {
+  margin: 4rem 0 2rem 0;
+  text-align: center;
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ctaTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffff;
   margin: 0;
-  line-height: 1.6;
-  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.getStartedBtn {
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.getStartedBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.getStartedBtn:hover::before {
+  left: 100%;
+}
+
+.getStartedBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 255, 255, 0.4);
+}
+
+.getStartedBtn:active {
+  transform: translateY(0);
 }
 
 .ctaSection {
@@ -150,33 +183,55 @@
     padding: 0 2rem;
   }
   
-  .title {
-    font-size: 3rem;
+  .main {
+    padding: 1rem 2rem;
   }
   
-  .introText {
+  .textImageSection {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .imageTextSection {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .imageTextSection .textContent {
+    text-align: right;
+  }
+  
+  .textContent {
+    text-align: left;
+  }
+  
+  .sectionImage {
+    width: 250px;
+  }
+  
+  .mainText {
     font-size: 1.4rem;
   }
   
-  .missionText,
-  .founderText,
-  .philosophyText {
+  .subText {
     font-size: 1.1rem;
   }
   
-  .serviceText {
-    font-size: 1.1rem;
-  }
-  
-  .missionStatementText {
-    font-size: 1.3rem;
+  .highlightText {
+    font-size: 1.5rem;
   }
   
   .ctaTitle {
     font-size: 2.2rem;
   }
+  
+  .getStartedBtn {
+    font-size: 1.2rem;
+    padding: 1.2rem 3.5rem;
+  }
 }
-
 
 @media (min-width: 1024px) {
   .container {
@@ -184,47 +239,216 @@
   }
   
   .main {
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
   }
   
-  .content {
-    max-width: 900px;
+  .section {
+    margin: 4rem 0;
   }
   
-  .title {
-    font-size: 3.5rem;
-    margin: 0 0 4rem 0;
+  .textImageSection,
+  .imageTextSection {
+    gap: 4rem;
   }
   
-  .introText {
+  .sectionImage {
+    width: 300px;
+  }
+  
+  .mainText {
     font-size: 1.5rem;
   }
   
-  .missionText,
-  .founderText,
-  .philosophyText {
+  .subText {
     font-size: 1.2rem;
   }
   
-  .serviceText {
-    font-size: 1.2rem;
-  }
-  
-  .missionStatementText {
-    font-size: 1.4rem;
+  .highlightText {
+    font-size: 1.6rem;
   }
   
   .ctaTitle {
     font-size: 2.5rem;
   }
+  
+  .getStartedBtn {
+    font-size: 1.3rem;
+    padding: 1.3rem 4rem;
+  }
 }
 
-@media (min-width: 1440px) {
-  .title {
-    font-size: 4rem;
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
   }
-  
+
+  .main {
+    padding: 1rem 2rem;
+  }
+
+  .textImageSection {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .imageTextSection {
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .imageTextSection .textContent {
+    text-align: right;
+  }
+
+  .textContent {
+    text-align: left;
+  }
+
+  .sectionImage {
+    width: 250px;
+  }
+
+  .mainText {
+    font-size: 1.4rem;
+  }
+
+  .subText {
+    font-size: 1.1rem;
+  }
+
+  .highlightText {
+    font-size: 1.5rem;
+  }
+
+  .boxList {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .boxItem {
+    flex: 1;
+    max-width: 300px;
+    padding: 2.5rem 2rem;
+  }
+
+  .serviceIcon {
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px;
+    max-height: 72px;
+  }
+
+  .headerTextBlue {
+    font-size: 1.2rem;
+  }
+
+  .boxItem p {
+    font-size: 1rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+
+  .getStartedBtn {
+    font-size: 1.2rem;
+    padding: 1.2rem 3.5rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .main {
+    padding: 1.5rem 2rem;
+  }
+
+  .section {
+    margin: 4rem 0;
+  }
+
+  .textImageSection,
+  .imageTextSection {
+    gap: 4rem;
+  }
+
+  .sectionImage {
+    width: 300px;
+  }
+
+  .mainText {
+    font-size: 1.5rem;
+  }
+
+  .subText {
+    font-size: 1.2rem;
+  }
+
+  .highlightText {
+    font-size: 1.6rem;
+  }
+
+  .boxList {
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .boxItem {
+    padding: 3rem 2.5rem;
+  }
+
+  .serviceIcon {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .headerTextBlue {
+    font-size: 1.3rem;
+  }
+
+  .boxItem p {
+    font-size: 1.1rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+
+  .getStartedBtn {
+    font-size: 1.3rem;
+    padding: 1.3rem 4rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .sectionImage {
+    width: 350px;
+  }
+
+  .mainText {
+    font-size: 1.6rem;
+  }
+
+  .highlightText {
+    font-size: 1.8rem;
+  }
+
   .ctaTitle {
     font-size: 3rem;
+  }
+
+  .boxList {
+    gap: 4rem;
   }
 }
