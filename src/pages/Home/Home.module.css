@@ -240,12 +240,13 @@
   }
   
   .main h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   
   .main p {
     font-size: 0.9rem;
   }
+
 }
 
 /* Tablet Styles */
@@ -293,8 +294,8 @@
   .serviceIcon {
     width: 72px !important;
     height: 72px !important;
-    max-width: 72px;
-    max-height: 72px;
+    max-width: 92px;
+    max-height: 92px;
   }
 
   .headerTextBlue {
