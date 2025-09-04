@@ -7,9 +7,6 @@
 :root {
   --bg-primary: #1a1a1a;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --accent-yellow: #fbbf24;
-  --accent-yellow-hover: #f59e0b;
 }
 
 html {

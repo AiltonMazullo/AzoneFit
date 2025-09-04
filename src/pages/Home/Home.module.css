@@ -224,14 +224,15 @@
 /* Mobile Styles */
 @media (max-width: 767px) {
   .logo {
-    margin-top: 5rem;
+    margin-top: -0.1rem;
     margin-bottom: 5rem;
     text-align: center;
   }
   
-  .logo img {
-    width: 180px;
+  img {
+    width: 300px;
     height: auto;
+    margin-bottom: -80px;
   }
   
   .main {
@@ -254,12 +255,13 @@
   }
   
   .logo {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
   
   .logo img {
-    width: 250px;
+    width: 300px;
     height: auto;
+    margin-bottom: -50px;
   }
   
   .main {
@@ -321,6 +323,7 @@
 
   .logo {
     margin: 1.5rem 0;
+    margin-bottom: 80px;
   }
 
   .logo img {

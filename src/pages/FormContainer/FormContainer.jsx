@@ -32,18 +32,24 @@ const FormContainer = () => {
 
       if (currentQuestionIndex === 8) {
         try {
-          const firstName = answers[0];
-          const email = answers[2];
+          const formData = {
+            name: answers[0],
+            instagram: answers[1],
+            email: answers[2],
+            fitness_level: answers[3],
+            fitness_goal: answers[4],
+            impediment: answers[5],
+            motivated_scale: answers[6],
+            economized: answers[7],
+            when_start: answers[8],
+          };
 
-          const response = await axios.post("/send-email", {
-            firstName,
-            email,
-          });
-
-          console.log("Email enviado com sucesso!", response.data);
+          const response = await axios.post("/form-register", formData);
+          console.log("Formulário enviado com sucesso!", response.data);
+          
         } catch (error) {
           console.error(
-            "Erro ao enviar email:",
+            "Erro ao enviar formulário:",
             error.response?.data || error.message
           );
         }
