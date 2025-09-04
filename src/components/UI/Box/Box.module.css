@@ -56,8 +56,12 @@
   display: block;
 }
 
-
 .BoxListItem:hover .serviceIcon {
+  filter: brightness(0) saturate(100%) invert(100%);
+  transform: scale(1.1);
+}
+
+.BoxListItem:hover .serviceIconCalendar {
   filter: brightness(0) saturate(100%) invert(100%);
   transform: scale(1.1);
 }
