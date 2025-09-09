@@ -64,3 +64,57 @@ a.active {
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3);
   }
 }
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  nav {
+    gap: 0.5rem;
+  }
+  
+  a {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+  }
+  
+  a.active {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  nav {
+    gap: 1rem;
+  }
+  
+  a {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+  }
+  
+  a.active {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  nav {
+    gap: 1.5rem;
+  }
+  
+  a {
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    margin: 0 1.5rem;
+  }
+  
+  a.active {
+    padding: 1.1rem 3.5rem;
+    font-size: 1.2rem;
+  }
+}

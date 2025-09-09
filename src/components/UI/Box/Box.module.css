@@ -44,8 +44,8 @@
 }
 
 .serviceIconCalendar {
-  width: 90px ;
-  height:72px ;
+  width: 90px;
+  height: 72px;
   margin-bottom: 1rem;
   filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%)
     hue-rotate(175deg) brightness(103%) contrast(101%);

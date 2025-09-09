@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -22,13 +22,15 @@
 .logoIcon {
   width: 32px;
   height: 32px;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%) hue-rotate(175deg) brightness(103%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%)
+    hue-rotate(175deg) brightness(103%) contrast(101%);
 }
 
 .logoText {
   width: 80px;
   height: auto;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%) hue-rotate(175deg) brightness(103%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%)
+    hue-rotate(175deg) brightness(103%) contrast(101%);
 }
 
 .mainContent {
@@ -470,12 +472,12 @@
     z-index: 10;
     width: auto;
   }
-  
+
   .logoIcon {
     width: 24px;
     height: 24px;
   }
-  
+
   .logoText {
     width: 60px;
     height: auto;

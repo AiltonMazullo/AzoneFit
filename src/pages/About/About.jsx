@@ -23,7 +23,8 @@ const About = () => {
           <div className={styles.textImageSection}>
             <div className={styles.textContent}>
               <p className={styles.mainText}>
-                At DM Aeon, fitness is more than movement it's the discipline that shapes who you become.
+                At DM Aeon, fitness is more than movement it's the discipline
+                that shapes who you become.
               </p>
               <p className={styles.subText}>
                 We exist to help people break limits, build lasting strength,
@@ -57,14 +58,12 @@ const About = () => {
               </p>
               <p className={styles.subText}>
                 From years in the military, Diego learned that true progress
-                comes from discipline, resilience, and consistency.
-                DM Workout was born to bring that same edge into fitness and
-                life.
+                comes from discipline, resilience, and consistency. DM Workout
+                was born to bring that same edge into fitness and life.
               </p>
               <p className={styles.subText}>
-                This is not a quick fix.
-                It's precision, science, and mindset combined to forge results
-                that last.
+                This is not a quick fix. It's precision, science, and mindset
+                combined to forge results that last.
               </p>
             </div>
           </div>
@@ -77,13 +76,13 @@ const About = () => {
         <section className={styles.section}>
           <div className={styles.textSection}>
             <p className={styles.highlightText}>
-              What makes DM Workout different?
-              We don't just train bodies we rewire mindsets.
+              What makes DM Workout different? We don't just train bodies we
+              rewire mindsets.
             </p>
             <p className={styles.subText}>
-              Better health, unshakable confidence
-              and discipline that expands into every part of life
-              That's the ripple effect of transformation.
+              Better health, unshakable confidence and discipline that expands
+              into every part of life That's the ripple effect of
+              transformation.
             </p>
           </div>
         </section>
@@ -91,8 +90,8 @@ const About = () => {
         <section className={styles.ctaSection}>
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>
-              Your next chapter starts here
-              Strong body. Strong mind. Strong life.
+              Your next chapter starts here Strong body. Strong mind. Strong
+              life.
             </h2>
             <button className={styles.getStartedBtn} onClick={handleGetStarted}>
               GET STARTED
