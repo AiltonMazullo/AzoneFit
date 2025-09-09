@@ -1,0 +1,210 @@
+/* Mobile First - Base Styles */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(93%) saturate(1352%)
+    hue-rotate(175deg) brightness(103%) contrast(101%);
+  transition: all 0.3s ease;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+.errorCode {
+  margin-bottom: 1rem;
+}
+
+.errorCode span {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  line-height: 1;
+  display: block;
+}
+
+.main h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.main h2 span {
+  background: linear-gradient(45deg, #00ffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0 2rem 0;
+  color: #cccccc;
+  max-width: 400px;
+}
+
+.testimonial {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(0, 255, 255, 0.1);
+  border-left: 4px solid #00ffff;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.testimonial p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #00ffff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ctaSection {
+  margin-top: 2rem;
+}
+
+.goHomeBtn {
+  background: linear-gradient(45deg, #00ffff, #0099cc);
+  color: #000000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  min-width: 150px;
+}
+
+.goHomeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+  background: linear-gradient(45deg, #00ccff, #00ffff);
+}
+
+.goHomeBtn:active {
+  transform: translateY(0);
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .logo img {
+    width: 150px;
+  }
+
+  .errorCode span {
+    font-size: 12rem;
+  }
+
+  .main h2 {
+    font-size: 2.2rem;
+  }
+
+  .main p {
+    font-size: 1.1rem;
+    max-width: 500px;
+  }
+
+  .testimonial {
+    max-width: 450px;
+    padding: 2rem;
+  }
+
+  .testimonial p {
+    font-size: 1.1rem;
+  }
+
+  .goHomeBtn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .logo img {
+    width: 180px;
+  }
+
+  .errorCode span {
+    font-size: 16rem;
+  }
+
+  .main h2 {
+    font-size: 2.5rem;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+
+  .testimonial {
+    max-width: 500px;
+    padding: 2.5rem;
+  }
+
+  .testimonial p {
+    font-size: 1.2rem;
+  }
+
+  .goHomeBtn {
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .logo img {
+    width: 200px;
+  }
+
+  .errorCode span {
+    font-size: 20rem;
+  }
+
+  .main h2 {
+    font-size: 3rem;
+  }
+
+  .testimonial {
+    max-width: 600px;
+  }
+}
