@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "./PaymentBox.module.css";
 import basicIcon from "../../../assets/onlineCoaching.svg";
 import premiumIcon from "../../../assets/group.svg";
-import eliteIcon from "../../../assets/elite.svg";
+import eliteIcon from "../../../assets/Elite.svg";
 import ChallengeIcon from "../../../assets/15days.svg";
 
 const PaymentBox = () => {
