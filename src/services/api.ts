@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://147.93.118.28:8080",
+  baseURL: "https://api.dmaeon.com",
 });
 
 export default api;
