@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useFormState } from "../../hooks/useFormState";
 import ProgressBar from "../../components/Form/ProgressBar/ProgressBar";
 import styles from "./FormContainer.module.css";
 import LogoFormIcon from "../../assets/logo-form-icon.svg";
 import LogoFormNome from "../../assets/logo-form-nome.svg";
+import api from "../../services/api";
 
 const FormContainer = () => {
   const {
@@ -44,9 +44,8 @@ const FormContainer = () => {
             when_start: answers[8],
           };
 
-          const response = await axios.post("/form-register", formData);
+          const response = await api.post("/form-register", formData);
           console.log("Formulário enviado com sucesso!", response.data);
-          
         } catch (error) {
           console.error(
             "Erro ao enviar formulário:",
